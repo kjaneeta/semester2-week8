@@ -21,3 +21,13 @@ float distance( Point p, Point q ) {
     // implement distance here
     return 0.0;
 }
+
+float reflect( Point q )
+{
+    ;
+}
+
+float shift( Point q, Point dq )
+{
+    ;
+}
