@@ -10,4 +10,3 @@ student.o: student.c student.h structure.h
 
 clean:
 	rm student.o main.o student
-	
