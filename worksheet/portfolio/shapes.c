@@ -74,6 +74,8 @@ float triangleArea( Triangle t )
     float height = lineLength(heightCoord);
 
     float area = 1/2*(breadth)*(height);
+
+    return area;
 }
 
 /*
@@ -97,7 +99,7 @@ bool samePoint( Point p1, Point p2 )
     comparePoints.p[1].y = p2.y;
 
 
-    if (abs(lineLength(comparePoints))<1.0e-6)
+    if (fabsf(lineLength(comparePoints))<1.0e-6)
     {
         return true;
     }
