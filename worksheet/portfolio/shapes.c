@@ -51,31 +51,28 @@ float lineLength( Line l )
 
 float triangleArea( Triangle t )
 {
-    // calculate the area of a Triangle
 
-    Point midpoint;
-    midpoint.x = (t.p[0].x + t.p[1].x)/2;
-    midpoint.y = (t.p[0].y + t.p[1].y)/2;
+    Line l1;
+    l1.p[0] = t.p[0]; 
+    l1.p[1] = t.p[1];
 
-    Line breadthCoord;
-    breadthCoord.p[0].x = t.p[0].x;
-    breadthCoord.p[1].x = t.p[1].x;
-    breadthCoord.p[0].y = t.p[0].y;
-    breadthCoord.p[1].y = t.p[1].y;
+    Line l2;
+    l2.p[0] = t.p[1]; 
+    l2.p[1] = t.p[2];
 
-    Line heightCoord;
-    heightCoord.p[0].x = midpoint.x;
-    heightCoord.p[1].x = t.p[2].x;
-    heightCoord.p[0].y = midpoint.y;
-    heightCoord.p[1].y = t.p[2].y;
+    Line l3;
+    l3.p[0] = t.p[0]; 
+    l3.p[1] = t.p[2];
 
-    float breadth = lineLength(breadthCoord);
+    // length of sides:
 
-    float height = lineLength(heightCoord);
+    float a = lineLength(l1);
+    float b = lineLength(l2);
+    float c = lineLength(l3);
 
-    float area = 0.5*(breadth)*(height);
+    float s = (a + b + c) / 2.0f; 
 
-    return area;
+    return sqrtf(s * (s-a) * (s-b) * (s-c));
 }
 
 /*
