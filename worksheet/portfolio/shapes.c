@@ -73,7 +73,7 @@ float triangleArea( Triangle t )
 
     float height = lineLength(heightCoord);
 
-    float area = 1/2*(breadth)*(height);
+    float area = 0.5*(breadth)*(height);
 
     return area;
 }
