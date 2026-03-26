@@ -114,7 +114,7 @@ bool pointInLine( Point p, Line l)
     bool sameFirstPoint = samePoint(p, l.p[0]);
     bool sameSecondPoint = samePoint(p, l.p[1]);
 
-    if (sameFirstPoint) or (sameSecondPoint)
+    if ((sameFirstPoint) || (sameSecondPoint))
     {
         return true;
     }
@@ -131,7 +131,7 @@ bool pointInTriangle( Point p, Triangle t )
     bool sameSecondPoint = samePoint(p, t.p[1]);
     bool sameThirdPoint = samePoint(p, t.p[2]);
 
-    if (sameFirstPoint) or (sameSecondPoint) or (sameThirdPoint)
+    if ((sameFirstPoint) || (sameSecondPoint) || (sameThirdPoint))
     {
         return true;
     }
